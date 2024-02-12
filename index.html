@@ -9,34 +9,91 @@
 </head>
 <body>
     <div id="app">
-        <main>
-           <div class="topContainer">
-              <div class="logoContainer">
-                <img src="src/pictures/logo.png" class="createlogo" alt="Create Extended Logo">
-            </div>
-              <h1>Create Extended 2.0</h1>
-              <p>Create Extended expands the possibilities of the popular Create mod, offering new mechanics and enhanced gameplay experiences.</p>
-              <div class="buttonContainer">
-
-                <a class="buttonLink" target="_blank" href="https://discord.com">
-                    <button class="selectionButton">
-                        <img src="src/icons/discord.svg" class="buttonLogo" alt="Discord Logo">
-                    </button></a> 
-
-                    <a class="buttonLink" target="_blank" href="https://modrinth.com/modpack/create-extended">
-                        <button class="selectionButton">
-                            <img src="src/icons/modrinth.svg" class="buttonLogo" alt="Modrinth Logo">
-                        </button>
-                    </a> 
-
-                    <a class="buttonLink" target="_blank" href="https://github.com/">
-                        <button class="selectionButton">
-                            <img src="src/icons/github.svg" class="buttonLogo" alt="Github Logo">
-                        </button>
-                    </a>
+            <main>
+                <div class="topContainer">
+                   <div class="logoContainer">
+                     <img src="src/pictures/logo.png" class="createlogo" alt="Create Extended Logo">
+                 </div>
+                   <h1>Create Extended</h1>
+                   <p>Create Extended expands the possibilities of the popular Create mod, offering new mechanics and enhanced gameplay experiences.</p>
+                   <div class="buttonContainer">
+     
+                     <a class="buttonLink" target="_blank" href="https://discord.gg/Tb7WVpdEsU">
+                         <button class="selectionButton">
+                             <img src="src/icons/discord.svg" class="buttonLogo" alt="Discord Logo">
+                         </button></a> 
+     
+                         <a class="buttonLink" target="_blank" href="https://modrinth.com/modpack/create-extended">
+                             <button class="selectionButton">
+                                 <img src="src/icons/modrinth.svg" class="buttonLogo" alt="Modrinth Logo">
+                             </button>
+                         </a> 
+     
+                         <a class="buttonLink" target="_blank" href="https://github.com/">
+                             <button class="selectionButton">
+                                 <img src="src/icons/github.svg" class="buttonLogo" alt="Github Logo">
+                             </button>
+                         </a>
+                     </div>
                 </div>
-           </div>
-        </main>
+             </main>
      </div>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+        <div class="mySlides fade active">
+            <img src="src/pictures/slideshow/1.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="src/pictures/slideshow/2.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="src/pictures/slideshow/3.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="src/pictures/slideshow/4.png" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="src/pictures/slideshow/5.png" style="width:100%">
+        </div>
+        <!-- Pfeile -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <script>
+        var slideIndex = 0;
+        var changeTimeout;
+    
+        showSlides();
+    
+        function plusSlides(n) {
+            clearTimeout(changeTimeout);
+            showSlides(slideIndex += n);
+            resetTimer();
+        }
+    
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            if (slideIndex >= slides.length) { slideIndex = 0; }
+            if (slideIndex < 0) { slideIndex = slides.length - 1; }
+            slides[slideIndex].classList.add("active");
+            changeTimeout = setTimeout(changeSlide, 3000); // Ändere Bild alle 3 Sekunden
+            resetTimer();
+        }
+    
+        function resetTimer() {
+            clearTimeout(changeTimeout);
+            changeTimeout = setTimeout(changeSlide, 7000); // Ändere Bild nach 5 Sekunden Inaktivität
+        }
+    
+        function changeSlide() {
+            plusSlides(1);
+        }
+    </script>
+    <p1>© Create Extended</p1>
 </body>
 </html>
