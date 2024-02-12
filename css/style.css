@@ -1,0 +1,244 @@
+:root{
+    font-family:Inter,system-ui,Avenir,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    font-weight:400;
+    color-scheme:light dark;
+    color:#213547;
+    background-color:#f0f0f0;
+    text-align:center;
+    font-synthesis:none;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-text-size-adjust:100%;
+    overflow-y: auto;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% + 50px); 
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    white-space: nowrap;
+}
+.logo {
+    font-size: 32px;
+    color: #213547;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #213547;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navbar a.active {
+    align-items: center;
+    color: #ffffff;
+    background-color: #213547;
+    text-align: center;
+    border-radius: 45px;  
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    align-items: center;
+}
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* width */
+/* width */
+body::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+    background: #f0f0f0;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+    background: #213547;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+    background: #213547;
+}
+
+
+.slideshow-container {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 60px auto 0 auto; /* 20 Pixel oben, 0 Pixel unten, automatisch links und rechts */
+    height: 300px; 
+    margin-bottom: 20px; /* Neuer Abstand zum Seitenrand nach unten */
+}
+
+.mySlides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.mySlides.active {
+    opacity: 1;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Pfeile */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border: none;
+    background: none;
+}
+
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+
+
+.createlogo {
+    border-radius: 50%;
+    margin-top: 50px;
+}
+h1{
+    font-size:3.2em;
+    line-height:1.1
+}
+.topContainer {
+    max-width: 400px; /* Maximale Breite für den Container */
+    margin: 0 auto; /* Zentrieren des Containers */
+    text-align: center; /* Zentrieren des Inhalts */
+}
+p {
+    word-wrap: break-word; /* Umbruch nach bestimmter Breite */
+}
+p1 {
+    font-size:1em;
+    line-height:1.5;    
+}
+
+
+.downloads {
+    display: inline-block;
+    border: none;
+    background-color: #ffffff;
+    font-size: 15px;
+    color: #213547;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 15px;
+}
+
+.buttonContent {
+    display: flex;
+    align-items: center;
+}
+
+.iconContainer {
+    margin-right: 10px; /* Kleiner Abstand rechts vom Icon */
+}
+
+.icon {
+    width: 24px; /* Breite des Icons anpassen */
+    height: 24px; /* Höhe des Icons anpassen */
+}
+
+.downloadText {
+    margin-left: 10px; /* Kleiner Abstand links vom Text */
+    font: bold 15px Arial, sans-serif; /* Verwende eine fette Schriftart */
+}
+
+
+
+
+
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Logos vertikal zentrieren */
+    margin-top: 40px;
+}
+
+.selectionButton {
+    background-color: #ffffff; /* Weiße Hintergrundfarbe */
+    color: #00FF00; /* Grüne Schriftfarbe */
+    border: none;
+    border-radius: 20px; /* Abgerundete Ecken */
+    padding: 0px 0px; /* Innenabstand */
+    margin: 0 10px; /* Abstand zwischen den Buttons */
+    width: 100px; /* Festlegen der Breite */
+    height: 70px; /* Festlegen der Höhe */
+    cursor: pointer; /* Zeige Handcursor beim Überfahren */
+    transition: background-color 0.3s; /* Übergangseffekt für Hintergrundfarbe */
+}
+
+.selectionButton:hover {
+    background-color: #e2e2e2; /* Graue Hintergrundfarbe beim Überfahren */
+}
+
+.selectionButton img {
+    width: 37px; /* Größe des Bildsymbols anpassen */
+    vertical-align: middle; /* Bildsymbole vertikal zentrieren */
+}
+
+.selectionButton span {
+    display: none; /* Verstecke das Label */
+}

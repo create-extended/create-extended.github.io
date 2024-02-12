@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Extended</title>
     <link rel="icon" type="image/png" href="src/pictures/icon.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <!-- Test -->
@@ -14,7 +14,7 @@
 
         <nav class="navbar">
             <a href="/" class="active">Home</a>
-            <a href="/about">About</a>
+            <a href="/installation">Installation</a>
             <a href="/gallery">Gallery</a>
         </nav>
     </div>
@@ -27,6 +27,41 @@
                  </div>
                    <h1>Create Extended</h1>
                    <p>Create Extended expands the possibilities of the popular Create mod, offering new mechanics and enhanced gameplay experiences.</p>
+
+                <button id="downloadButton" class="downloads">
+                <div class="buttonContent">
+                    <div class="iconContainer">
+                        <img src="src/icons/download.svg" class="icon" alt="Download Icon">
+                    </div>
+                    <span id="downloadText" class="downloadText">Loading...</span>
+                </div>
+            </button>
+
+            <script>
+                // Funktion, um API-Anfrage zu senden
+                async function fetchDownloads() {
+                    try {
+                        const response = await fetch('https://api.modrinth.com/v2/project/create-extended');
+                        const data = await response.json();
+                        const downloads = data.downloads;
+            
+                        // Button-Element finden und Textinhalt aktualisieren
+                        const downloadText = document.getElementById('downloadText');
+                        downloadText.textContent = `${downloads}`;
+                    } catch (error) {
+                        console.error('Fehler beim Abrufen der Daten:', error);
+                    }
+                }
+            
+                // Beim Laden der Seite die Funktion zum Abrufen der Downloads aufrufen
+                window.onload = function() {
+                    // Vor dem Laden der Daten das Logo sichtbar machen
+                    const logo = document.querySelector('.createlogo');
+                    logo.style.visibility = 'visible';
+                    fetchDownloads();
+                };
+            </script>
+
                    <div class="buttonContainer">
      
                      <a class="buttonLink" target="_blank" href="https://discord.gg/Tb7WVpdEsU">
