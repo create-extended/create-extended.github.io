@@ -17,57 +17,79 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    overflow-y: scroll;
 }
-
-
-
-.top-bar {
-    color: #333;
-    padding: 10px;
-    text-align: right;
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% + 50px); 
+    padding: 20px 100px;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-sizing: border-box; /* Include padding in width calculation */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    white-space: nowrap;
 }
-.top-bar a {
+.logo {
+    font-size: 32px;
     color: #213547;
     text-decoration: none;
-    margin-left: 10px;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 18px;
+    color: #213547;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 40px;
+}
+.navbar a.active {
+    align-items: center;
+    color: #ffffff;
+    background-color: #213547;
+    text-align: center;
+    border-radius: 45px;  
     padding: 5px 10px;
     border-radius: 20px;
     display: inline-block;
     align-items: center;
 }
-.top-bar a.active {
-    align-items: center;
-    color: #ffffff;
-    background-color: #213547;
-    text-align: center;
+
+
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
 }
 
 /* width */
-::-webkit-scrollbar {
+/* width */
+body::-webkit-scrollbar {
     width: 7px;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
     background: #f0f0f0;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
     background: #213547;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-radius: 10px;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+body::-webkit-scrollbar-thumb:hover {
     background: #213547;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
 }
 
 
