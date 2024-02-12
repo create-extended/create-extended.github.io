@@ -1,0 +1,62 @@
+:root{
+    font-family:Inter,system-ui,Avenir,Helvetica,Arial,sans-serif;
+    line-height:1.5;
+    font-weight:400;
+    color-scheme:light dark;
+    color:#213547;
+    background-color:#f0f0f0;
+    text-align:center;
+    font-synthesis:none;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    -webkit-text-size-adjust:100%
+}
+.createlogo {
+    border-radius: 50%;
+    margin-top: 100px;
+}
+h1{
+    font-size:3.2em;
+    line-height:1.1
+}
+.topContainer {
+    max-width: 400px; /* Maximale Breite für den Container */
+    margin: 0 auto; /* Zentrieren des Containers */
+    text-align: center; /* Zentrieren des Inhalts */
+}
+p {
+    word-wrap: break-word; /* Umbruch nach bestimmter Breite */
+}
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Logos vertikal zentrieren */
+    margin-top: 50px;
+}
+
+.selectionButton {
+    background-color: #ffffff; /* Weiße Hintergrundfarbe */
+    color: #00FF00; /* Grüne Schriftfarbe */
+    border: none;
+    border-radius: 20px; /* Abgerundete Ecken */
+    padding: 0px 0px; /* Innenabstand */
+    margin: 0 10px; /* Abstand zwischen den Buttons */
+    width: 100px; /* Festlegen der Breite */
+    height: 70px; /* Festlegen der Höhe */
+    cursor: pointer; /* Zeige Handcursor beim Überfahren */
+    transition: background-color 0.3s; /* Übergangseffekt für Hintergrundfarbe */
+}
+
+.selectionButton:hover {
+    background-color: #CCCCCC; /* Graue Hintergrundfarbe beim Überfahren */
+}
+
+.selectionButton img {
+    width: 37px; /* Größe des Bildsymbols anpassen */
+    vertical-align: middle; /* Bildsymbole vertikal zentrieren */
+}
+
+.selectionButton span {
+    display: none; /* Verstecke das Label */
+}
