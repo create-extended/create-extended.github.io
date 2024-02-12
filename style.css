@@ -21,6 +21,27 @@ html, body {
 
 
 
+.top-bar {
+    color: #333;
+    padding: 10px;
+    text-align: right;
+}
+.top-bar a {
+    color: #213547;
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    align-items: center;
+}
+.top-bar a.active {
+    align-items: center;
+    color: #ffffff;
+    background-color: #213547;
+    text-align: center;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 7px;

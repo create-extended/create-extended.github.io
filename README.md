@@ -1,1 +1,3 @@
-The Create-Extended Website
+<p align=center>
+<h>The Create-Extended Website</h>
+</p>
